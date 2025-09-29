@@ -1,0 +1,576 @@
+/* Base styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Eindhoven content styles with more color */
+.eindhoven-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.eindhoven-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    transform: rotate(30deg);
+}
+
+.eindhoven-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.eindhoven-header p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+    position: relative;
+}
+
+.content-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid;
+}
+
+.academic-section {
+    border-left-color: #3498db;
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.05) 0%, rgba(255, 255, 255, 0.95) 20%);
+}
+
+.intercultural-section {
+    border-left-color: #9b59b6;
+    background: linear-gradient(to right, rgba(155, 89, 182, 0.05) 0%, rgba(255, 255, 255, 0.95) 20%);
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 3px solid;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, currentColor, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+}
+
+.academic-section .section-title {
+    border-bottom-color: #3498db;
+    background: linear-gradient(90deg, #3498db, #2c3e50);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.intercultural-section .section-title {
+    border-bottom-color: #9b59b6;
+    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.section-title i {
+    margin-right: 15px;
+    font-size: 1.8rem;
+}
+
+.section-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-content p {
+    margin-bottom: 1.8rem;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2.5rem 0;
+    border-left: 5px solid;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.academic-section .highlight-box {
+    border-left-color: #2980b9;
+    background: linear-gradient(135deg, #e8f4fd 0%, #d6eaf8 100%);
+}
+
+.intercultural-section .highlight-box {
+    border-left-color: #8e44ad;
+    background: linear-gradient(135deg, #f4ecf7 0%, #e8daef 100%);
+}
+
+.key-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.key-point {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 4px solid;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease;
+}
+
+.key-point:hover {
+    transform: translateY(-3px);
+}
+
+.academic-section .key-point {
+    border-top-color: #3498db;
+    background: linear-gradient(to bottom, #e8f4fd, white);
+}
+
+.intercultural-section .key-point {
+    border-top-color: #9b59b6;
+    background: linear-gradient(to bottom, #f4ecf7, white);
+}
+
+.key-point h4 {
+    font-size: 1.3rem;
+    color: #2d3e50;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.key-point h4 i {
+    margin-right: 12px;
+    font-size: 1.4rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+}
+
+.academic-section .key-point h4 i {
+    background: #3498db;
+}
+
+.intercultural-section .key-point h4 i {
+    background: #9b59b6;
+}
+
+/* Decorative elements */
+.decoration {
+    position: absolute;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.decoration-1 {
+    top: 10%;
+    right: 5%;
+    font-size: 8rem;
+    color: #3498db;
+}
+
+.decoration-2 {
+    bottom: 10%;
+    left: 5%;
+    font-size: 6rem;
+    color: #9b59b6;
+    transform: rotate(-15deg);
+}
+
+/* Dark mode support */
+body.dark-mode {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+    color: #ecf0f1;
+}
+
+body.dark-mode .eindhoven-header {
+    background: linear-gradient(135deg, #2980b9 0%, #8e44ad 100%);
+}
+
+body.dark-mode .content-section {
+    background: rgba(45, 45, 45, 0.9);
+    color: #ecf0f1;
+}
+
+body.dark-mode .academic-section {
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.1) 0%, rgba(45, 45, 45, 0.9) 20%);
+}
+
+body.dark-mode .intercultural-section {
+    background: linear-gradient(to right, rgba(155, 89, 182, 0.1) 0%, rgba(45, 45, 45, 0.9) 20%);
+}
+
+body.dark-mode .section-content {
+    color: #ecf0f1;
+}
+
+body.dark-mode .highlight-box {
+    background: rgba(60, 60, 60, 0.8);
+}
+
+body.dark-mode .academic-section .highlight-box {
+    background: linear-gradient(135deg, rgba(41, 128, 185, 0.2) 0%, rgba(34, 34, 34, 0.8) 100%);
+}
+
+body.dark-mode .intercultural-section .highlight-box {
+    background: linear-gradient(135deg, rgba(142, 68, 173, 0.2) 0%, rgba(34, 34, 34, 0.8) 100%);
+}
+
+body.dark-mode .key-point {
+    background: rgba(50, 50, 50, 0.9);
+    color: #ecf0f1;
+}
+
+/* Gallery button styles */
+.gallery-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.gallery-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.gallery-button i {
+    margin-right: 8px;
+}
+
+/* Ensure decorations don't interfere with the button */
+.decoration {
+    pointer-events: none;
+}
+
+/* Gallery styles - Collage Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    gap: 5px;
+    padding: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    transition: transform 0.3s ease;
+}
+
+/* Important: Make anchor tags take up full space */
+.gallery-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Fixed image styling to ensure proper sizing with anchor parent */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Maintain the varying sizes for items */
+.gallery-item:nth-child(4n+1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-item:nth-child(8n+2) {
+    grid-column: span 2;
+}
+
+.gallery-item:nth-child(12n+8) {
+    grid-row: span 2;
+}
+
+/* Hover effects */
+.gallery-item:hover {
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Resource Box Styling */
+.resource-box {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e6eef8 100%);
+    border-left: 4px solid #3498db;
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.resource-box h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.resource-box h4 i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.resource-box p {
+    margin-bottom: 15px;
+}
+
+.resource-button {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.resource-button:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.4);
+}
+
+.resource-button i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Dark mode support for resource box */
+body.dark-mode .resource-box {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.7) 0%, rgba(52, 73, 94, 0.7) 100%);
+    border-left-color: #3498db;
+}
+
+body.dark-mode .resource-box h4 {
+    color: #ecf0f1;
+}
+
+body.dark-mode .resource-button {
+    background: linear-gradient(135deg, #3498db 0%, #2573a7 100%);
+}
+
+body.dark-mode .resource-button:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #2062a3 100%);
+}
+
+/* Improved spacing and formatting */
+.section-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-content p {
+    margin-bottom: 1.8rem;
+}
+
+.resource-box {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e6eef8 100%);
+    border-left: 4px solid #3498db;
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.key-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.key-point {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 4px solid;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2.5rem 0;
+    border-left: 5px solid;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Improved image spacing */
+.image-placeholder {
+    margin: 1.5rem 0;
+}
+
+.image-placeholder.classes img,
+.image-placeholder.dutch-food img {
+    margin: 0 auto;
+    display: block;
+}
+
+.image-placeholder.netherlands-exploration,
+.image-placeholder.team-bonding {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 2rem 0;
+}
+
+.image-placeholder.netherlands-exploration img,
+.image-placeholder.team-bonding img,
+.image-placeholder.team-bonding video {
+    margin: 0;
+}
+
+/* Consistent anchor styling */
+.section-content a:not(.resource-button):not(.gallery-button) {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dashed #3498db;
+    transition: all 0.2s ease;
+    padding: 0 2px;
+}
+
+.section-content a:not(.resource-button):not(.gallery-button):hover {
+    color: #2980b9;
+    background-color: rgba(52, 152, 219, 0.1);
+    border-bottom: 1px solid #2980b9;
+}
+
+.key-point h5 {
+    margin-bottom: 0.8rem;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .eindhoven-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .eindhoven-header p {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .key-points {
+        grid-template-columns: 1fr;
+    }
+    
+    .decoration {
+        display: none;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 150px;
+        gap: 10px;
+    }
+    
+    /* Simplify collage on mobile */
+    .gallery-item:nth-child(3n+1),
+    .gallery-item:nth-child(7n+2),
+    .gallery-item:nth-child(11n+3),
+    .gallery-item:nth-child(13n+4),
+    .gallery-item:nth-child(17n+5) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .gallery-item:nth-child(4n+1) {
+        grid-column: span 2;
+    }
+}

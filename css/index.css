@@ -1,0 +1,50 @@
+/* Index Page Styles */
+/* Add all index.html-specific styles here */
+
+#intro{
+    padding-bottom: 20px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.country_box {
+    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 2px 8px rgba(52,152,219,0.08);
+    border-radius: 12px;
+    background: #fff;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+}
+.country_box:hover {
+    box-shadow: 0 8px 24px rgba(52,152,219,0.18), 0 2px 8px rgba(52,152,219,0.10);
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(90deg, #eaf6fb 0%, #f3eafc 100%);
+    border-color: #3498db;
+}
+
+@media (max-width: 768px) {
+    #intro {
+        margin: 20px;
+    }
+    #intro > div:last-child {
+        padding: 20px;
+    }
+    #intro h2 {
+        font-size: 2rem;
+    }
+    #intro .timeline::before {
+        left: 15px;
+    }
+    #intro .timeline-item {
+        padding-left: 50px;
+    }
+    #intro .timeline-item::before {
+        left: 7px;
+    }
+}
+
+
