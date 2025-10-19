@@ -3,55 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lleida Gallery</title>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/lleida.css?v=3">
+    <title>Eindhoven Gallery</title>
+    <link rel="stylesheet" href="css/eindhoven.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Add Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
     <div id="header-container"></div>
     
     <main>
-        <div class="lleida-header">
-            <h1>Lleida Gallery</h1>
-            <p>Visual memories from Catalonia, Spain</p>
-            <a href="lleida.html" class="gallery-button">
-                <i class="fas fa-arrow-left"></i> Back to Lleida
+        <div class="eindhoven-header">
+            <h1>Eindhoven Gallery</h1>
+            <p>Visual memories from my Netherlands experience</p>
+            <a href="eindhoven.html" class="gallery-button">
+                <i class="fas fa-arrow-left"></i> Back to Eindhoven
             </a>
-            <div class="decoration decoration-1">
-                <i class="fas fa-camera"></i>
-            </div>
-            <div class="decoration decoration-2">
-                <i class="fas fa-images"></i>
-            </div>
         </div>
         
         <div class="content-section">
             <div class="gallery-grid">
-                <!-- Add your Lleida images here -->
+                <!-- Images -->
                 <div class="gallery-item">
-                    <a href="images/Lleida/image1.jpg" target="_blank">
-                        <img src="images/Lleida/image1.jpg" alt="Lleida Memory 1">
+                    <a href="images/Netherlands/IMG-20250926-WA0002.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250926-WA0002.jpg" alt="Netherlands Experience">
                     </a>
                 </div>
                 <div class="gallery-item">
-                    <a href="images/Lleida/image2.jpg" target="_blank">
-                        <img src="images/Lleida/image2.jpg" alt="Lleida Memory 2">
+                    <a href="images/Netherlands/IMG-20250926-WA0003.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250926-WA0003.jpg" alt="Netherlands Experience">
                     </a>
                 </div>
                 <div class="gallery-item">
-                    <a href="images/Lleida/image3.jpg" target="_blank">
-                        <img src="images/Lleida/image3.jpg" alt="Lleida Memory 3">
+                    <a href="images/Netherlands/IMG-20250927-WA0002.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250927-WA0002.jpg" alt="Netherlands Experience">
                     </a>
                 </div>
-                <!-- Add more gallery items as needed -->
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250928-WA0001.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250928-WA0001.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250928-WA0012.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250928-WA0012.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250928-WA0014.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250928-WA0014.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0050.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0050.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0051.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0051.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0052.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0052.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0053.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0053.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0054.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0054.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0055.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0055.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0056.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0056.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0057.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0057.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0058.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0058.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0059.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0059.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0060.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0060.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0061.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0061.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0062.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0062.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0063.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0063.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0064.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0064.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0065.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0065.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0066.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0066.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0067.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0067.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0068.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0068.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0069.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0069.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0070.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0070.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0071.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0071.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0072.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0072.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0073.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0073.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0074.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0074.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0075.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0075.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0076.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0076.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0077.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0077.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0078.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0078.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0079.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0079.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0080.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0080.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0081.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0081.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0082.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0082.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0083.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0083.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0084.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0084.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0085.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0085.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0086.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0086.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0087.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0087.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0088.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0088.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0089.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0089.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0090.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0090.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0091.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0091.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0092.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0092.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0093.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0093.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0094.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0094.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0095.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0095.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0096.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0096.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0097.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0097.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0098.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0098.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0099.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0099.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0100.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0100.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0101.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0101.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0102.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0102.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0103.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0103.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0104.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0104.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0105.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0105.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0106.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0106.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0107.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0107.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0108.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0108.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0109.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0109.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0110.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0110.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0111.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0111.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0112.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0112.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0113.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0113.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0114.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0114.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0115.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0115.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0116.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0116.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/Netherlands/IMG-20250929-WA0117.jpg" data-lightbox="netherlands-gallery" data-title="Netherlands Experience">
+                        <img src="images/Netherlands/IMG-20250929-WA0117.jpg" alt="Netherlands Experience">
+                    </a>
+                </div>
+                
             </div>
         </div>
     </main>
     
     <div id="footer-container"></div>
-
-    <script src="js/lleida.js"></script>
+    <script src="js/eindhoven.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <!-- Add Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Initialize lightbox with options
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'fadeDuration': 300,
+            'imageFadeDuration': 300,
+            'alwaysShowNavOnTouchDevices': true
+        });
+    </script>
 </body>
 </html>
