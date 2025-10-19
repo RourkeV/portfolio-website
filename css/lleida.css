@@ -24,7 +24,7 @@ main {
     text-align: center;
     margin-bottom: 3rem;
     padding: 2.5rem;
-    background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%);
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     color: white;
@@ -68,13 +68,13 @@ main {
 }
 
 .academic-section {
-    border-left-color: #3498db;
-    background: linear-gradient(to right, rgba(52, 152, 219, 0.05) 0%, rgba(255, 255, 255, 0.95) 20%);
+    border-left-color: #e74c3c;
+    background: linear-gradient(to right, rgba(231, 76, 60, 0.05) 0%, rgba(255, 255, 255, 0.95) 20%);
 }
 
 .intercultural-section {
-    border-left-color: #9b59b6;
-    background: linear-gradient(to right, rgba(155, 89, 182, 0.05) 0%, rgba(255, 255, 255, 0.95) 20%);
+    border-left-color: #c0392b;
+    background: linear-gradient(to right, rgba(192, 57, 43, 0.05) 0%, rgba(255, 255, 255, 0.95) 20%);
 }
 
 .section-title {
@@ -92,15 +92,15 @@ main {
 }
 
 .academic-section .section-title {
-    border-bottom-color: #3498db;
-    background: linear-gradient(90deg, #3498db, #2c3e50);
+    border-bottom-color: #e74c3c;
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
     -webkit-background-clip: text;
     background-clip: text;
 }
 
 .intercultural-section .section-title {
-    border-bottom-color: #9b59b6;
-    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+    border-bottom-color: #c0392b;
+    background: linear-gradient(90deg, #c0392b, #a93226);
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -132,13 +132,13 @@ main {
 }
 
 .academic-section .highlight-box {
-    border-left-color: #2980b9;
-    background: linear-gradient(135deg, #e8f4fd 0%, #d6eaf8 100%);
+    border-left-color: #c0392b;
+    background: linear-gradient(135deg, #fde8e6 0%, #fcd7d4 100%);
 }
 
 .intercultural-section .highlight-box {
-    border-left-color: #8e44ad;
-    background: linear-gradient(135deg, #f4ecf7 0%, #e8daef 100%);
+    border-left-color: #a93226;
+    background: linear-gradient(135deg, #f9e0de 0%, #f5ccc8 100%);
 }
 
 .key-points {
@@ -162,13 +162,13 @@ main {
 }
 
 .academic-section .key-point {
-    border-top-color: #3498db;
-    background: linear-gradient(to bottom, #e8f4fd, white);
+    border-top-color: #e74c3c;
+    background: linear-gradient(to bottom, #fde8e6, white);
 }
 
 .intercultural-section .key-point {
-    border-top-color: #9b59b6;
-    background: linear-gradient(to bottom, #f4ecf7, white);
+    border-top-color: #c0392b;
+    background: linear-gradient(to bottom, #f9e0de, white);
 }
 
 .key-point h4 {
@@ -192,11 +192,11 @@ main {
 }
 
 .academic-section .key-point h4 i {
-    background: #3498db;
+    background: #e74c3c;
 }
 
 .intercultural-section .key-point h4 i {
-    background: #9b59b6;
+    background: #c0392b;
 }
 
 /* Decorative elements */
@@ -211,21 +211,21 @@ main {
     top: 10%;
     right: 5%;
     font-size: 8rem;
-    color: #3498db;
+    color: #e74c3c;
 }
 
 .decoration-2 {
     bottom: 10%;
     left: 5%;
     font-size: 6rem;
-    color: #9b59b6;
+    color: #c0392b;
     transform: rotate(-15deg);
 }
 
 /* Gallery button styles */
 .gallery-button {
     display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -233,7 +233,7 @@ main {
     font-weight: 600;
     margin-top: 20px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
     position: relative;
     z-index: 10;
     cursor: pointer;
@@ -241,8 +241,8 @@ main {
 
 .gallery-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
 }
 
 .gallery-button i {
@@ -251,8 +251,8 @@ main {
 
 /* Resource Box Styling */
 .resource-box {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e6eef8 100%);
-    border-left: 4px solid #3498db;
+    background: linear-gradient(135deg, #fde8e6 0%, #fcd7d4 100%);
+    border-left: 4px solid #e74c3c;
     padding: 25px 30px;
     border-radius: 8px;
     margin: 30px 0;
@@ -275,7 +275,7 @@ main {
 
 .resource-box h4 i {
     margin-right: 10px;
-    color: #3498db;
+    color: #e74c3c;
 }
 
 .resource-box p {
@@ -285,20 +285,20 @@ main {
 .resource-button {
     display: inline-flex;
     align-items: center;
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
     color: white;
     padding: 10px 20px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
 }
 
 .resource-button:hover {
-    background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
 }
 
 .resource-button i {
@@ -334,18 +334,18 @@ main {
 
 /* Consistent anchor styling */
 .section-content a:not(.resource-button):not(.gallery-button) {
-    color: #3498db;
+    color: #e74c3c;
     text-decoration: none;
     font-weight: 500;
-    border-bottom: 1px dashed #3498db;
+    border-bottom: 1px dashed #e74c3c;
     transition: all 0.2s ease;
     padding: 0 2px;
 }
 
 .section-content a:not(.resource-button):not(.gallery-button):hover {
-    color: #2980b9;
-    background-color: rgba(52, 152, 219, 0.1);
-    border-bottom: 1px solid #2980b9;
+    color: #c0392b;
+    background-color: rgba(231, 76, 60, 0.1);
+    border-bottom: 1px solid #c0392b;
 }
 
 .key-point h5 {
@@ -362,7 +362,7 @@ body.dark-mode {
 }
 
 body.dark-mode .lleida-header {
-    background: linear-gradient(135deg, #2980b9 0%, #8e44ad 100%);
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
 }
 
 body.dark-mode .content-section {
@@ -371,11 +371,11 @@ body.dark-mode .content-section {
 }
 
 body.dark-mode .academic-section {
-    background: linear-gradient(to right, rgba(52, 152, 219, 0.1) 0%, rgba(45, 45, 45, 0.9) 20%);
+    background: linear-gradient(to right, rgba(231, 76, 60, 0.1) 0%, rgba(45, 45, 45, 0.9) 20%);
 }
 
 body.dark-mode .intercultural-section {
-    background: linear-gradient(to right, rgba(155, 89, 182, 0.1) 0%, rgba(45, 45, 45, 0.9) 20%);
+    background: linear-gradient(to right, rgba(192, 57, 43, 0.1) 0%, rgba(45, 45, 45, 0.9) 20%);
 }
 
 body.dark-mode .section-content {
@@ -387,11 +387,11 @@ body.dark-mode .highlight-box {
 }
 
 body.dark-mode .academic-section .highlight-box {
-    background: linear-gradient(135deg, rgba(41, 128, 185, 0.2) 0%, rgba(34, 34, 34, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.2) 0%, rgba(34, 34, 34, 0.8) 100%);
 }
 
 body.dark-mode .intercultural-section .highlight-box {
-    background: linear-gradient(135deg, rgba(142, 68, 173, 0.2) 0%, rgba(34, 34, 34, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(192, 57, 43, 0.2) 0%, rgba(34, 34, 34, 0.8) 100%);
 }
 
 body.dark-mode .key-point {
@@ -401,7 +401,7 @@ body.dark-mode .key-point {
 
 body.dark-mode .resource-box {
     background: linear-gradient(135deg, rgba(44, 62, 80, 0.7) 0%, rgba(52, 73, 94, 0.7) 100%);
-    border-left-color: #3498db;
+    border-left-color: #e74c3c;
 }
 
 body.dark-mode .resource-box h4 {
@@ -409,11 +409,11 @@ body.dark-mode .resource-box h4 {
 }
 
 body.dark-mode .resource-button {
-    background: linear-gradient(135deg, #3498db 0%, #2573a7 100%);
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
 }
 
 body.dark-mode .resource-button:hover {
-    background: linear-gradient(135deg, #2980b9 0%, #2062a3 100%);
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
 }
 
 /* Responsive design */
