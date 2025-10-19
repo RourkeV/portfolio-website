@@ -57,8 +57,8 @@ function initHeaderScripts() {
 // Modal functionality
 const modal = document.getElementById('imageModal');
 const modalImg = document.getElementById('modalImage');
-const closeBtn = document.querySelector('.close');
 const galleryItems = document.querySelectorAll('.gallery-item img');
+const closeBtn = document.querySelector('.close');
 
 // Add click event to all gallery images
 galleryItems.forEach(img => {
@@ -93,37 +93,26 @@ document.addEventListener('keydown', function(event) {
 
 // Image modal functionality for all images
 document.addEventListener('DOMContentLoaded', function() {
-    // Load header and footer
-    loadComponent('header-container', 'components/header.html');
-    loadComponent('footer-container', 'components/footer.html');
-
-    // Modal functionality
     const images = document.querySelectorAll('.image-placeholder img');
-
     images.forEach(img => {
         img.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
-            document.body.style.overflow = 'hidden';
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <span class="close">&times;</span>
+                <img class="modal-content" src="${this.src}">
+            `;
+            document.body.appendChild(modal);
+            
+            modal.querySelector('.close').onclick = function() {
+                modal.remove();
+            };
+            
+            modal.onclick = function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            };
         });
     });
-
-    function closeModal() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-
-    closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) closeModal();
-    });
-
-    function loadComponent(containerId, filepath) {
-        fetch(filepath)
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById(containerId).innerHTML = data;
-            })
-            .catch(error => console.error('Error loading component:', error));
-    }
 });

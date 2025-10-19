@@ -3,50 +3,34 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #fff;
+    background: white;
+    min-height: 100vh;
 }
 
 /* Header styles */
 .lleida-header {
+    width: 100%;
     text-align: center;
     padding: 120px 20px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     position: relative;
     overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .lleida-header h1 {
     font-size: 4.5em;
-    margin: 0;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    font-weight: 600;
+    margin: 0 0 20px 0;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    font-weight: 700;
 }
 
 .lleida-header p {
     font-size: 1.8em;
-    margin: 20px 0;
-    color: rgba(255,255,255,0.9);
-}
-
-.gallery-button {
-    display: inline-block;
-    padding: 15px 40px;
-    background: white;
-    color: #667eea;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 1.2em;
-    transition: all 0.3s ease;
-    margin-top: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.gallery-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    margin: 0 0 30px 0;
+    opacity: 0.95;
+    font-weight: 300;
 }
 
 /* Content Section Styles */
@@ -211,25 +195,45 @@ body {
     }
 }
 
+.gallery-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background: rgba(255,255,255,0.9);
+    color: #667eea;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    background: white;
+}
+
 .decoration {
     position: absolute;
-    font-size: 3em;
-    color: rgba(255,255,255,0.2);
+    font-size: 4em;
+    color: rgba(255,255,255,0.15);
+    pointer-events: none;
 }
 
 .decoration-1 {
-    top: 20%;
-    left: 15%;
-    animation: float 6s ease-in-out infinite;
+    top: 15%;
+    left: 10%;
+    animation: float 7s ease-in-out infinite;
 }
 
 .decoration-2 {
-    bottom: 20%;
-    right: 15%;
-    animation: float 8s ease-in-out infinite;
+    bottom: 15%;
+    right: 10%;
+    animation: float 9s ease-in-out infinite reverse;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(5deg); }
 }
