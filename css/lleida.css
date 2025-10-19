@@ -416,6 +416,66 @@ body.dark-mode .resource-button:hover {
     background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
 }
 
+/* Gallery styles - Collage Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    gap: 5px;
+    padding: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(231, 76, 60, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Important: Make anchor tags take up full space */
+.gallery-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Fixed image styling to ensure proper sizing with anchor parent */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Maintain the varying sizes for items */
+.gallery-item:nth-child(4n+1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-item:nth-child(8n+2) {
+    grid-column: span 2;
+}
+
+.gallery-item:nth-child(12n+8) {
+    grid-row: span 2;
+}
+
+/* Hover effects */
+.gallery-item:hover {
+    transform: scale(1.02);
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     main {
@@ -440,5 +500,25 @@ body.dark-mode .resource-button:hover {
     
     .decoration {
         display: none;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 150px;
+        gap: 10px;
+    }
+    
+    /* Simplify collage on mobile */
+    .gallery-item:nth-child(3n+1),
+    .gallery-item:nth-child(7n+2),
+    .gallery-item:nth-child(11n+3),
+    .gallery-item:nth-child(13n+4),
+    .gallery-item:nth-child(17n+5) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .gallery-item:nth-child(4n+1) {
+        grid-column: span 2;
     }
 }
