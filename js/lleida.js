@@ -53,3 +53,40 @@ function initHeaderScripts() {
         setTheme(savedTheme === 'dark' ? 'dark' : 'light');
     }
 }
+
+// Modal functionality
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const galleryItems = document.querySelectorAll('.gallery-item img');
+const closeBtn = document.querySelector('.close');
+
+// Add click event to all gallery images
+galleryItems.forEach(img => {
+    img.addEventListener('click', function() {
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+});
+
+// Close modal when clicking the X
+closeBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && modal.style.display === 'block') {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
