@@ -1,16 +1,18 @@
 // Load header and footer
 document.addEventListener('DOMContentLoaded', function() {
-    // Load header
-    fetch('header.html')
+    // Load header from components folder
+    fetch('components/header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-container').innerHTML = data;
             setActiveLink();
+            // Re-initialize mobile menu after header loads
+            initializeMobileMenu();
         })
         .catch(error => console.error('Error loading header:', error));
     
-    // Load footer
-    fetch('footer.html')
+    // Load footer from components folder
+    fetch('components/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
@@ -28,4 +30,16 @@ function setActiveLink() {
             link.classList.add('active');
         }
     });
+}
+
+// Initialize mobile menu if it exists
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+    }
 }
