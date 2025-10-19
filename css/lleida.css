@@ -3,31 +3,50 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: white;
-    min-height: 100vh;
+    background: #fff;
 }
 
 /* Header styles */
 .lleida-header {
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
     position: relative;
     overflow: hidden;
     margin-bottom: 40px;
 }
 
 .lleida-header h1 {
-    font-size: 4em;
+    font-size: 4.5em;
     margin: 0;
+    color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 600;
 }
 
 .lleida-header p {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin: 20px 0;
-    opacity: 0.9;
+    color: rgba(255,255,255,0.9);
+}
+
+.gallery-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: white;
+    color: #667eea;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 /* Content Section Styles */
