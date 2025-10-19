@@ -3,31 +3,90 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: white;
     min-height: 100vh;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1 {
+/* Header styles */
+.lleida-header {
     text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    font-size: 3em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.subtitle {
-    text-align: center;
-    color: rgba(255,255,255,0.9);
-    font-size: 1.2em;
+    position: relative;
+    overflow: hidden;
     margin-bottom: 40px;
 }
 
+.lleida-header h1 {
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.lleida-header p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    opacity: 0.9;
+}
+
+/* Content Section Styles */
+.content-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.section-content {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Image and Resource Styles */
+.image-placeholder img,
+.image-placeholder video {
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-placeholder img:hover,
+.image-placeholder video:hover {
+    transform: scale(1.02);
+}
+
+.resource-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.resource-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.resource-button:hover {
+    background: #764ba2;
+}
+
+/* Gallery Styles */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -131,44 +190,6 @@ h1 {
     .gallery {
         grid-template-columns: 1fr;
     }
-}
-
-.lleida-header {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.lleida-header h1 {
-    font-size: 4em;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.lleida-header p {
-    font-size: 1.5em;
-    margin: 20px 0;
-    opacity: 0.9;
-}
-
-.gallery-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background: white;
-    color: #667eea;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 20px;
-}
-
-.gallery-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .decoration {

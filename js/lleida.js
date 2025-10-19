@@ -90,3 +90,29 @@ document.addEventListener('keydown', function(event) {
         document.body.style.overflow = 'auto';
     }
 });
+
+// Image modal functionality for all images
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.image-placeholder img');
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <span class="close">&times;</span>
+                <img class="modal-content" src="${this.src}">
+            `;
+            document.body.appendChild(modal);
+            
+            modal.querySelector('.close').onclick = function() {
+                modal.remove();
+            };
+            
+            modal.onclick = function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            };
+        });
+    });
+});
