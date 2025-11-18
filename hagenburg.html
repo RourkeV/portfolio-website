@@ -59,11 +59,10 @@
 
                 <h3 style="margin-top:1.5rem"><i class="fas fa-user-check"></i> My Specific Contributions</h3>
                 <ul>
-                    <li>Registered device + application in TTN and validated uplinks/downlinks.</li>
+                    <li>Final sensor building (fitting all sensors and components into our enclosure).</li>
                     <li>Defined a clear payload schema and version tag to avoid decode ambiguity later.</li>
-                    <li>Configured the MQTT client on Raspberry Pi and mapped topics to storage fields.</li>
                     <li>Designed the DB table structure for time‑series inserts and basic querying.</li>
-                    <li>Connected the dashboard to live data and verified end‑to‑end latency.</li>
+                    <li>Connected the dashboard to live data.</li>
                 </ul>
 
                 <h3 style="margin-top:1.5rem"><i class="fas fa-lightbulb"></i> Key Insights I Gained</h3>
@@ -85,12 +84,7 @@
                 <ul>
                     <li><strong>Topic mismatch:</strong> Initial MQTT subscription missed messages; fixed by matching TTN v3 topic format and application ID.</li>
                     <li><strong>Decode errors:</strong> Byte/hex confusion created wrong TDS values; standardized the decoder and documented units.</li>
-                    <li><strong>Noisy readings:</strong> Implemented a small rolling window filter and added sensor warm‑up time before logging.</li>
                 </ul>
-
-                <div class="highlight-box">
-                    <p><strong>Next Steps:</strong> add payload versioning in metadata, per‑sensor calibration records, battery/health telemetry, and alerts for out‑of‑range values. Containerize the Pi services to make deployments reproducible.</p>
-                </div>
                 <p style="margin-top:1rem"><em>Personal note:</em> I stayed intentionally curious — asking many questions to clarify requirements and to help my peers unblock. I’ll continue documenting my “why → how → what” so the process is as visible as the result.</p>
             </div>
         </div>
