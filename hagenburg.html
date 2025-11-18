@@ -4,15 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hagenburg</title>
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hagenburg.css">
-    <script src="js/hagenburg.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Lightbox CSS for potential inline images in future -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <meta name="description" content="Hagenburg (Hagenberg) — IoT coursework with LoRaWAN, MQTT, Raspberry Pi, and exploring Austria.">
 </head>
 <body>
     <div id="header-container"></div>
     <main>
-        <h1>Hagenburg</h1>
-        <!-- Page content here -->
+        <div class="hagenburg-header">
+            <h1>Hagenburg, Austria</h1>
+            <p>IoT with LoRaWAN, MQTT, and a live sensor dashboard — plus exploring Austria</p>
+            <a href="hagenburg-gallery.html" class="gallery-button">
+                <i class="fas fa-images"></i> Gallery
+            </a>
+        </div>
+
+        <div class="content-section academic-section">
+            <h2 class="section-title"><i class="fas fa-microchip"></i> In Class Work</h2>
+            <div class="section-content">
+                <p>Our lecturer, Volker Christian, led the module with contagious enthusiasm and deep knowledge of IoT.</p>
+                <p>We built a full end‑to‑end pipeline:
+                    data is transmitted by a LoRaWAN device to a local gateway; the gateway forwards to The Things Network (TTN);
+                    from TTN, we use MQTT to pull the data onto a Raspberry Pi, and then forward it to a front‑end dashboard for live visualization.</p>
+
+                <div class="key-points">
+                    <div class="key-point">
+                        <h4><i class="fas fa-wifi"></i> Week 1 — Connectivity + Architecture</h4>
+                        <p>Configured the LoRaWAN device and established the link to The Things Network.
+                           We were introduced to the full IoT architecture we’d use to collect and visualize sensor data.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4><i class="fas fa-database"></i> Week 2 — Data Flow + Storage</h4>
+                        <p>Set up a database to store incoming sensor readings. Implemented MQTT subscriptions from TTN on the Raspberry Pi and persisted the data reliably.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4><i class="fas fa-thermometer-half"></i> Week 3 — Sensor Build + Dashboard</h4>
+                        <p>Assembled the physical sensor device: LoRaWAN antenna/device, GPS, TDS, pH, temperature, and turbidity sensors, driven by an ESP microcontroller.
+                           Ensured the dashboard reflected the live data streams end‑to‑end.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <p>Outcome: a complete pipeline — LoRaWAN device → Gateway → TTN → Raspberry Pi (MQTT) → Database → Front‑end dashboard — demonstrated during our final presentation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section intercultural-section">
+            <h2 class="section-title"><i class="fas fa-mountain"></i> Exploring Austria</h2>
+            <div class="section-content">
+                <p>We explored Linz in the first week, walking across bridges and through the city’s shopping streets. We returned to visit the Ars Electronica Center (Future Museum), seeing innovations around AI and emerging technologies.</p>
+                <p>On the first weekend we visited Gmunden for a mountain trip, a treetop tour, and lunch at the top — plus a visit to a lakeside church.</p>
+                <p>The following weekend we went to Salzburg and hiked in the Austrian Alps, a highlight of the trip. We explored the city, enjoyed glühwein and pretzels, and climbed the fortress steps in the center.</p>
+                <p>Hagenburg (Hagenberg) itself was remote, and became my favorite location of the entire minor. The private rooms offered needed quiet, and the surrounding nature was wonderful. The train ride to Belgium was relaxing — until I realized I’d left my laptop bag on the last stretch!</p>
+                <p>And that was Austria.</p>
+            </div>
+        </div>
     </main>
     <div id="footer-container"></div>
+
+    <script src="js/hagenburg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hagenburg Gallery</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hagenburg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <div class="hagenburg-header">
+            <h1>Hagenburg Gallery</h1>
+            <p>Visual memories from my Austria experience</p>
+            <a href="hagenburg.html" class="gallery-button">
+                <i class="fas fa-arrow-left"></i> Back to Hagenburg
+            </a>
+        </div>
+
+        <div class="content-section">
+            <p class="placeholder-note">Add your Austria images under <code>images/Austria/</code> and reference them here.</p>
+            <div class="gallery-grid">
+                <!-- Example image entry (copy and update paths/titles)
+                <div class="gallery-item">
+                    <a href="images/Austria/sample-1.jpg" data-lightbox="austria-gallery" data-title="Austria Experience">
+                        <img src="images/Austria/sample-1.jpg" alt="Austria Experience">
+                    </a>
+                </div>
+                -->
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="js/hagenburg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        lightbox.option({
+            resizeDuration: 200,
+            wrapAround: true,
+            fadeDuration: 300,
+            imageFadeDuration: 300,
+            alwaysShowNavOnTouchDevices: true
+        });
+    </script>
+</body>
+</html>
