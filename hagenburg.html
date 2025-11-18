@@ -51,6 +51,47 @@
                 <div class="highlight-box">
                     <p>Outcome: a complete pipeline — LoRaWAN device → Gateway → TTN → Raspberry Pi (MQTT) → Database → Front‑end dashboard — demonstrated during our final presentation.</p>
                 </div>
+
+                <h3 style="margin-top:1.5rem"><i class="fas fa-route"></i> Process: Why → How → What</h3>
+                <p><strong>Why:</strong> We needed reliable long‑range, low‑power telemetry for outdoor sensing. LoRaWAN via TTN fit the constraints better than Wi‑Fi or cellular for a student prototype.</p>
+                <p><strong>How:</strong> I provisioned the device in TTN, confirmed the payload format, subscribed via MQTT on the Raspberry Pi, persisted records in a lightweight local database, and bound the dashboard to live topics.</p>
+                <p><strong>What:</strong> A working, repeatable pipeline that streams GPS/TDS/pH/temperature/turbidity to the dashboard with timestamped, stored measurements.</p>
+
+                <h3 style="margin-top:1.5rem"><i class="fas fa-user-check"></i> My Specific Contributions</h3>
+                <ul>
+                    <li>Registered device + application in TTN and validated uplinks/downlinks.</li>
+                    <li>Defined a clear payload schema and version tag to avoid decode ambiguity later.</li>
+                    <li>Configured the MQTT client on Raspberry Pi and mapped topics to storage fields.</li>
+                    <li>Designed the DB table structure for time‑series inserts and basic querying.</li>
+                    <li>Connected the dashboard to live data and verified end‑to‑end latency.</li>
+                </ul>
+
+                <h3 style="margin-top:1.5rem"><i class="fas fa-lightbulb"></i> Key Insights I Gained</h3>
+                <ul>
+                    <li><strong>Payload discipline:</strong> Agreeing on units, ranges, and a version flag saves hours of debugging later.</li>
+                    <li><strong>MQTT topic hygiene:</strong> Consistent topic paths (e.g., <code>v3/&lt;app-id&gt;@ttn/devices/&lt;device-id&gt;/up</code>) make subscribers simpler and safer.</li>
+                    <li><strong>Time is data:</strong> Using gateway‑received timestamps prevents device clock drift from corrupting trends.</li>
+                    <li><strong>Signal vs. noise:</strong> pH and turbidity benefit from a small rolling median to reduce spikes without hiding events.</li>
+                </ul>
+
+                <h3 style="margin-top:1.5rem"><i class="fas fa-balance-scale"></i> Decisions & Trade‑offs</h3>
+                <ul>
+                    <li>Chose LoRaWAN for range/power at the cost of low bandwidth — acceptable for compact sensor payloads.</li>
+                    <li>Kept storage lightweight on the Pi to prioritize a demonstrable pipeline over heavy analytics.</li>
+                    <li>Favored a simple, readable dashboard first; deeper analytics come after data quality is proven.</li>
+                </ul>
+
+                <h3 style="margin-top:1.5rem"><i class="fas fa-tools"></i> Challenges I Hit (and How I Solved Them)</h3>
+                <ul>
+                    <li><strong>Topic mismatch:</strong> Initial MQTT subscription missed messages; fixed by matching TTN v3 topic format and application ID.</li>
+                    <li><strong>Decode errors:</strong> Byte/hex confusion created wrong TDS values; standardized the decoder and documented units.</li>
+                    <li><strong>Noisy readings:</strong> Implemented a small rolling window filter and added sensor warm‑up time before logging.</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>Next Steps:</strong> add payload versioning in metadata, per‑sensor calibration records, battery/health telemetry, and alerts for out‑of‑range values. Containerize the Pi services to make deployments reproducible.</p>
+                </div>
+                <p style="margin-top:1rem"><em>Personal note:</em> I stayed intentionally curious — asking many questions to clarify requirements and to help my peers unblock. I’ll continue documenting my “why → how → what” so the process is as visible as the result.</p>
             </div>
         </div>
 
