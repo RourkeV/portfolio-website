@@ -3,16 +3,16 @@ fetch('components/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header-container').innerHTML = data;
-        if (typeof initHeaderScripts === 'function') {
-            initHeaderScripts();
-        }
+        initHeaderScripts();
     });
+
 // Load footer
 fetch('components/footer.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('footer-container').innerHTML = data;
     });
+
 // Header logic
 function initHeaderScripts() {
     // Dark mode persistence
@@ -21,33 +21,24 @@ function initHeaderScripts() {
         const themeToggle = document.getElementById('theme-toggle');
         if (mode === 'dark') {
             body.classList.add('dark-mode');
-            if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            if (themeToggle) themeToggle.textContent = 'Light Mode';
             localStorage.setItem('theme', 'dark');
         } else {
             body.classList.remove('dark-mode');
-            if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            if (themeToggle) themeToggle.textContent = 'Dark Mode';
             localStorage.setItem('theme', 'light');
         }
     }
 
-    function applySavedTheme() {
-        const savedTheme = localStorage.getItem('theme');
-        setTheme(savedTheme === 'dark' ? 'dark' : 'light');
-    }
+    // Apply saved theme immediately
+    const savedTheme = localStorage.getItem('theme');
+    setTheme(savedTheme === 'dark' ? 'dark' : 'light');
 
-    document.addEventListener('DOMContentLoaded', function() {
-        applySavedTheme();
-    });
-
-    const body = document.body;
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
         themeToggle.addEventListener('click', function() {
-            const isDark = body.classList.contains('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
             setTheme(isDark ? 'light' : 'dark');
         });
-        // Apply saved theme on header load
-        const savedTheme = localStorage.getItem('theme');
-        setTheme(savedTheme === 'dark' ? 'dark' : 'light');
     }
 }
