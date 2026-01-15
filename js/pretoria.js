@@ -7,12 +7,14 @@ fetch('components/header.html')
             initHeaderScripts();
         }
     });
+
 // Load footer
 fetch('components/footer.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('footer-container').innerHTML = data;
     });
+        
 // Header logic
 function initHeaderScripts() {
     // Dark mode persistence
@@ -48,6 +50,11 @@ function initHeaderScripts() {
         });
         // Apply saved theme on header load
         const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        }
+    }
+}
         setTheme(savedTheme === 'dark' ? 'dark' : 'light');
     }
 }

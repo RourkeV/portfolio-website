@@ -1,8 +1,349 @@
-/* Pretoria page styles */
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #fef9e7 0%, #f8c471 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 main {
+    flex: 1;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Pretoria content styles */
+.pretoria-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.pretoria-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    transform: rotate(30deg);
+}
+
+.pretoria-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.pretoria-header p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+    position: relative;
+}
+
+/* Decorative elements */
+.decoration {
+    position: absolute;
+    font-size: 4rem;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.decoration-1 {
+    top: 10%;
+    left: 5%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.decoration-2 {
+    bottom: 10%;
+    right: 5%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.content-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid;
+}
+
+.academic-section {
+    border-left-color: #e67e22;
+    background: linear-gradient(to right, rgba(230, 126, 34, 0.05) 0%, rgba(255, 255, 255, 0.95) 20%);
+}
+
+.personal-section {
+    border-left-color: #d35400;
+    background: linear-gradient(to right, rgba(211, 84, 0, 0.05) 0%, rgba(255, 255, 255, 0.95) 20%);
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 3px solid;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, currentColor, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+}
+
+.academic-section .section-title {
+    border-bottom-color: #e67e22;
+    background: linear-gradient(90deg, #e67e22, #d35400);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.personal-section .section-title {
+    border-bottom-color: #d35400;
+    background: linear-gradient(90deg, #d35400, #c0392b);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.section-title i {
+    margin-right: 15px;
+    font-size: 1.8rem;
+}
+
+.section-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-content p {
+    margin-bottom: 1.8rem;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2.5rem 0;
+    border-left: 5px solid #e67e22;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-box h3 {
+    color: #d35400;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.highlight-box h3 i {
+    margin-right: 10px;
+    color: #e67e22;
+}
+
+.key-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.key-point {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 4px solid #e67e22;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to bottom, #fef5e7, white);
+}
+
+.key-point:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.key-point h3 {
+    font-size: 1.3rem;
+    color: #d35400;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.key-point h4 {
+    font-size: 1.3rem;
+    color: #d35400;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.key-point i {
+    margin-right: 12px;
+    font-size: 1.4rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e67e22;
+    color: white;
+}
+
+.key-point h4 i {
+    background: #d35400;
+}
+
+.key-point p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Gallery button */
+.gallery-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 30px;
+    background: white;
+    color: #e67e22;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.gallery-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    background: #f8f9fa;
+}
+
+.gallery-button i {
+    margin-right: 8px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #2c2416 0%, #3d2a1f 100%);
+    color: #e0e0e0;
+}
+
+body.dark-mode .pretoria-header {
+    background: linear-gradient(135deg, #d35400 0%, #a04000 100%);
+}
+
+body.dark-mode .content-section {
+    background: rgba(45, 45, 45, 0.95);
+    color: #e0e0e0;
+}
+
+body.dark-mode .section-content {
+    color: #d0d0d0;
+}
+
+body.dark-mode .key-point {
+    background: linear-gradient(to bottom, #3a3a3a, #2d2d2d);
+}
+
+body.dark-mode .key-point p {
+    color: #c0c0c0;
+}
+
+body.dark-mode .highlight-box {
+    background: linear-gradient(135deg, #3d2a1f 0%, #4a3326 100%);
+    border-left-color: #d35400;
+}
+
+body.dark-mode .highlight-box h3 {
+    color: #f39c12;
+}
+
+body.dark-mode .gallery-button {
+    background: #2d2d2d;
+    color: #f39c12;
+}
+
+body.dark-mode .gallery-button:hover {
+    background: #3a3a3a;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .pretoria-header h1 {
+        font-size: 2rem;
+    }
+
+    .pretoria-header p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .key-points {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .content-section {
+        padding: 1.5rem;
+    }
+
+    .decoration {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pretoria-header {
+        padding: 1.5rem;
+    }
+
+    .pretoria-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .key-point h3,
+    .key-point h4 {
+        font-size: 1.1rem;
+    }
 }
